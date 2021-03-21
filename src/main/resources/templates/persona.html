@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Crear Persona</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="../static/css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Agregar Persona</h2>
+            <form action="#" th:action="@{/guardar}" th:object="${persona}" method="post">
+                <input type="hidden" th:field="*{id}" name="id" id="id">
+                <div class="form-group">
+                    <label for="monica">PrimerNombre</label>
+                    <input type="text" id="monica" th:field="*{monica}" name="monica" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="rebeca">SegundoNombre</label>
+                    <input type="text" id="rebeca" th:field="*{rebeca}" name="rebeca" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="ramos">PrimerApellido</label>
+                    <input type="text" id="ramos" th:field="*{ramos}" name="ramos" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="flores">SegundoApellido</label>
+                    <input type="text" id="flores" th:field="*{flores}" name="flores" class="form-control">
+                </div>
+                
+                <button type="submit" class="btn btn-success">Guardar</button>
+            </form>
+        </div>
+    </body>
+</html>
